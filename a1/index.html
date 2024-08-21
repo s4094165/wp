@@ -1,69 +1,101 @@
-body {
-	width: 800px;
-	margin: auto;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Layout</title>
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
 
-header {
-	height: 100px;
-	background-color: black;
-	color: white;
-	font-family: 'Times New Roman', Times, serif;
-	padding-left: 10px;
-}
+        header {
+            height: 100px;
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 10px;
+        }
 
-nav {
-	float: left;
-	width: 120px;
-	background-color: gray;
-}
+        nav {
+            float: left;
+            width: 120px;
+            background-color: gray;
+        }
 
-.abc {
-	padding: 10px;
-}
+        .abc {
+            padding: 10px;
+        }
 
-main {
-	background-image: url("bg.jpeg");
-	margin-left: 120px;
-	border-left: 1px solid black;
-	padding-left: 10px;
-	height: auto;
-	color: darkblue;
-	font-size: 1em;
-}
+        main {
+            background-image: url("bg.jpeg");
+            margin-left: 120px;
+            border-left: 1px solid black;
+            padding-left: 10px;
+            height: auto;
+            color: darkblue;
+            font-size: 1em;
+        }
 
-footer {
-	clear: both;
-	width: 100%;
-	border-top: 1px solid black;
-}
+        footer {
+            clear: both;
+            width: 100%;
+            border-top: 1px solid black;
+        }
 
-aside {
-	width: 20%;
-	border: 1px solid black;
-	padding: 20px;
-	margin-left: 20px;
-	font-size: 1.2em;
-	float: right;
-	background-color: red;
-	color: white;
-	margin-right: 0;
-}
+        aside {
+            width: 20%;
+            border: 1px solid black;
+            padding: 20px;
+            margin-left: 20px;
+            font-size: 1.2em;
+            float: right;
+            background-color: red;
+            color: white;
+            margin-right: 0;
+        }
 
-nav a {
-	display: block;
-	text-decoration: none;
-	color: black;
-	font-family: arial;
-}
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-family: arial;
+        }
 
-nav a:hover {
-	color: white;
-	background-color: black;
-}
+        nav a:hover {
+            color: white;
+            background-color: black;
+        }
 
-a {
-	display: block;
-	color: black;
-	font-family: arial;
-}
+        a {
+            display: block;
+            color: black;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Header</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h2>Main Content Area</h2>
+        <p>This is the main content area. It has a background image and text styling.</p>
+    </main>
+    <aside>
+        <h2>Sidebar</h2>
+        <p>This is the sidebar with additional information or links.</p>
+    </aside>
+    <footer>
+        <p>Footer Content &copy; 2024</p>
+    </footer>
+</body>
+</html>
