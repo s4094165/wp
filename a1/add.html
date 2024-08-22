@@ -6,30 +6,32 @@
     <title>Pets Victoria - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Poetsen+One&family=Permanent+Marker&display=swap">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="logo.jpeg" alt="Pets Victoria Logo"></a>
-            <select id="navMenu" onchange="navigate()">
+            <a href="index.html"><img src="Images/logo.png" alt="Pets Victoria Logo"></a>
+            <select onchange="navigate(this)">
+                <option value="index.html" selected>Select an option</option>
                 <option value="index.html">Home</option>
                 <option value="pets.html">Pets</option>
-                <option value="add_more.html">Add More</option>
+                <option value="add.html">Add More</option>
                 <option value="gallery.html">Gallery</option>
             </select>
             <form>
                 <input type="text" placeholder="Search...">
+                <button type="submit" class="search-button">
+                    <span class="material-icons">search</span>
+                </button>
             </form>
         </nav>
     </header>
-    <main>
-        <h1 style="font-family: 'Permanent Marker', cursive;">Welcome to Pets Victoria</h1>
-        <img src="main.jpg" alt="Main Image" class="main-image">
-        <p>Your one-stop destination for pet adoption.</p>
+  <main>
     </main>
     <footer>
-        <p>© 2024 Nirmal Rajesh</p>
+        <p>© Copyright s4094165. All Rights Reserved | Designed For Pets Victoria</p>
     </footer>
 </body>
 </html>
