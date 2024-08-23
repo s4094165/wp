@@ -41,6 +41,7 @@ nav form {
     align-items: center;
     position: relative;
     margin-left: auto;
+    width: 200px;
 }
 
 nav form .material-icons {
@@ -95,11 +96,6 @@ h1 {
     color: #E57F3D;
 }
 
-h2, th {
-    font-family: 'Poetsen One', sans-serif;
-    color: #008080;
-}
-
 footer {
     background-color: #E57F3D;
     color: #36454F;
@@ -137,7 +133,7 @@ option {
     font-family: 'Ysabeau SC', sans-serif;
 }
 
-.container {
+.container1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -147,4 +143,83 @@ option {
     margin: 0 auto;
 }
 
+/* Styles for other pages except index.html*/
 
+h2 {
+    text-align: center;
+    font-family: 'Poetsen One', sans-serif;
+    color: #008080;
+}
+
+p {
+    text-align: center;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+
+.container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.container {
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* style for pets page */
+
+.container2 {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.container2 img {
+    width: 25%;
+    border-radius: 15px;
+}
+
+.container-wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+input[type="text"], select, input[type="file"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label.required::after {
+    content: "*";
+    color: red;
+}
+
+form {
+    width: 100%;
+    box-sizing: border-box;
+}
