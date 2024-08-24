@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ysabeau+SC&family=Poetsen+One&family=Permanent+Marker&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script src="scripts.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html"><img src="Images/logo.png" alt="Pets Victoria Logo"></a>
-            <select onchange="navigate(this)">
-                <option value="index.html" selected>Select an option</option>
-                <option value="index.html">Home</option>
-                <option value="pets.html">Pets</option>
-                <option value="add.html">Add More</option>
-                <option value="gallery.html">Gallery</option>
+            <select id="pageSelector" onchange="navigateToPage()">
+                <option value="http://127.0.0.1:5500/a1/index.html" selected>Select an option</option>
+                <option value="http://127.0.0.1:5500/a1/index.html">Home</option>
+                <option value="http://127.0.0.1:5500/a1/pets.html">Pets</option>
+                <option value="http://127.0.0.1:5500/a1/add.html">Add More</option>
+                <option value="http://127.0.0.1:5500/a1/gallery.html">Gallery</option>
             </select>
             <form>
                 <input type="text" placeholder="Search...">
