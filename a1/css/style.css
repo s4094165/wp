@@ -69,33 +69,27 @@ nav form .search-button .material-icons {
     color: #FFFFFF; 
 }
 
-/*
-main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fcf9ec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-*/
-main {
+main.home-page {
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     background-color: #fcf9ec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*
+
 main {
     flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    background-color: #fcf9ec;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
 }
-*/
+
+.main-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    margin-left: 5px; 
+}
 
 .circle {
     float: right;
@@ -124,11 +118,6 @@ footer {
     margin-top: auto;
 }
 
-.main-title {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 48px;
-    margin-left: 5px; 
-}
 
 .welcome-text {
     font-family: 'Poetsen One', cursive;
@@ -267,28 +256,6 @@ form {
     text-align: center;
 }
 
-/*
-.content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 20px;
-}
-
-.content img, .content table {
-    width: 48%;
-    height: auto;
-}
-
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 50%;
-}
-
-*/
 .content {
     display: flex;
     justify-content: space-between;
@@ -313,8 +280,60 @@ th, td {
 }
 
 th {
-    background-color: green;
-    color: white;
+    background-color: #fcf9ec;
+    color: #008080;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
 
+.image-box {
+    display: flex;
+    height: 240px;
+    width: 345px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.image-box img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+.image-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.image-box:hover img {
+    opacity: 1;
+}
+
+.image-box .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.image-box .overlay .material-icons {
+    font-size: 48px;
+}
