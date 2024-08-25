@@ -182,7 +182,7 @@ form {
 }
 
 .submit-button {
-    background-color: green;
+    background-color: #008080;
     color: white;
     border: 2px solid black;
     padding: 10px 20px;
@@ -200,7 +200,7 @@ form {
 }
 
 .submit-button:hover {
-    background-color: darkgreen;
+    background-color: #008080;
 }
 
 .button-container {
@@ -211,7 +211,7 @@ form {
 
 .clear-button {
     background-color: white;
-    color: green;
+    color: #008080;
     border: 2px solid black;
     padding: 10px 20px;
     font-size: 16px;
