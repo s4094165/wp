@@ -162,6 +162,13 @@ p.second{
     font-size: 16px;
 }
 
+p.third {
+    text-align: center;
+    font-family: 'Poetsen One', sans-serif;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 input[type="text"], select, input[type="file"] {
     width: 100%;
     box-sizing: border-box;
