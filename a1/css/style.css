@@ -213,7 +213,7 @@ form {
 .button-container {
     text-align: center;
     gap: 10px; 
-    margin-top: -40px; 
+    margin-top: 0px; 
 }
 
 .clear-button {
