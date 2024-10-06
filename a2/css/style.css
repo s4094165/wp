@@ -395,3 +395,56 @@ input[type="file"] {
     font-style: italic;
     margin-top: 14px;
 }
+
+
+.pet-image {
+    width: 460px; /* Set a fixed width for all pet images */
+    height: 460px; /* Set a fixed height for all pet images */
+    object-fit: cover; /* Ensure the image fills the container while keeping its aspect ratio */
+    border-radius: 50%; /* Keep the circular shape for the image */
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally if needed */
+}
+
+.pet-info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.pet-details {
+    font-family: "Ysabeau SC";
+    color: #008080;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    margin-top: 35px;
+}
+
+.pet-details .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-name-description {
+    font-family: "Ysabeau SC";
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pet-name-description h2 {
+    font-family: "Ysabeau SC";
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.pet-details .detail i {
+    margin-bottom: 1px;
+}
+
