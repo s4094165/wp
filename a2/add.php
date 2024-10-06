@@ -1,14 +1,13 @@
 <?php
-// Set the page title
+
 $title = "Add Page";
 
-// Include the header file
 include_once('includes/header.inc');
 ?>
 
 <header>
     <?php
-    // Include the navigation bar
+
     include_once('includes/nav.inc');
     ?>
     <h4>Add a Pet</h4>
@@ -30,7 +29,6 @@ include_once('includes/header.inc');
                 <option value="" disabled selected>--Choose an option--</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
-                <option value="bird">Bird</option>
                 <option value="other">Other</option>
             </select>
         </div>
@@ -85,6 +83,6 @@ include_once('includes/header.inc');
 </main>
 
 <?php
-// Include the footer file
+
 include_once('includes/footer.inc');
 ?>
