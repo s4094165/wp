@@ -4,11 +4,11 @@ if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "petsvictoria";
+    $dbname = "pets";
 } else {
     $servername = "talsprddb02.int.its.rmit.edu.au";
     $username = "s4094165";
-    $password = "s4094165";
+    $password = "Unnis2005!";
     $dbname = "s4094165";
 }
 // Create connection
