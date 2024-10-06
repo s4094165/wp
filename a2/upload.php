@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param('sssssss', $petName, $petType, $petDescription, $fileName, $imageCaption, $petAge, $petLocation);
 
         if ($stmt->execute()) {
-        $successMessage = "Pet added successfully!";
+        $successMessage = "Successfully added the pet :)";
         } else {
             $errorMessage = "Error adding pet: " . $connection->error;
         }
