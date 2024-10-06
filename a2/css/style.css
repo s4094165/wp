@@ -398,12 +398,12 @@ input[type="file"] {
 
 
 .pet-image {
-    width: 460px; /* Set a fixed width for all pet images */
-    height: 460px; /* Set a fixed height for all pet images */
-    object-fit: cover; /* Ensure the image fills the container while keeping its aspect ratio */
-    border-radius: 50%; /* Keep the circular shape for the image */
-    display: block; /* Ensure the image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally if needed */
+    width: 460px; 
+    height: 460px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .pet-info-section {
