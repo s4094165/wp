@@ -18,7 +18,7 @@ include_once('includes/header.inc');
             <p class="welcome-text">WELCOME TO PET<br>ADOPTION</p>
         </div>
         <div class="image-section">
-            <img src="Images/main.jpg" alt="Main Image" class="circle">
+            <img src="images/main.jpg" alt="Main Image" class="circle">
         </div>
     </main>
 

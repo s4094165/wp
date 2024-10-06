@@ -18,30 +18,24 @@ if (!$result) {
 
     include_once('includes/nav.inc');
     ?>
-
-        <h5 class="h3">Pets Victoria has a lot to offer!</h5>
-            <p class="p3">For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into
-                mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need
-                of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
+ <h2>Pets Victoria has a lot to offer!</h2>
+ <p class = "second">For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
     </header>
 
-    <main class="default-main">
-    <div class="gallery-container">
+    <main>
+        <div class="gallery">
         <?php while ($row = $result->fetch_assoc()): ?>
-            <div class="responsive">
-                <div class="gallery-item">
-                    <a href="details.php?petid=<?php echo $row['petid']; ?>">
-                        <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>" class="gallery-image">
-                        <div class="overlay">
-                            <span class="gallery-search-icon material-icons">search</span>
-                            <u>Discover more!</u>
-                        </div>
+            <div class="image-box">
+            <a href="details.php?petid=<?php echo $row['petid']; ?>">
+            <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>">
+                <div class="overlay">
+                    <span class="material-icons">search</span>
+                    <p>Discover More!</p>
+                </div>
                     </a>
                     <div class="desc"><?php echo htmlspecialchars($row['petname']); ?></div>
                 </div>
-            </div>
         <?php endwhile; ?>
-    </div>
 </main>
 
 <?php

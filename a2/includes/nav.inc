@@ -1,5 +1,5 @@
 <nav>
-            <a href="index.html"><img src="Images/logo.jpeg" alt="Pets Victoria Logo"></a>
+            <a href="index.html"><img src="images/logo.jpeg" alt="Pets Victoria Logo"></a>
             <select id="pageSelector" onchange="navigateToPage()">
                 <option value="https://jupiter.csit.rmit.edu.au/~s4094165/wp/a2/index.php" selected>Select an option</option>
                 <option value="https://jupiter.csit.rmit.edu.au/~s4094165/wp/a2/index.php">Home</option>
