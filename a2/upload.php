@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $uploadError = "Only JPG, JPEG and PNG images are allowed.";
         } else {
 
-            $maxSize = 500000; 
+            $maxSize = 5000; 
             if ($petImage['size'] > $maxSize) {
                 $uploadError = "Image size exceeds the limit of 500KB.";
             } else {
