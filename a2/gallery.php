@@ -22,24 +22,24 @@ if (!$result) {
     </header>
 
     <main>
-        <div class="gallery">
-           <div class="image-box">
-                <?php while ($row = $result->fetch_assoc()): ?>
-                    <a href="details.php?petid=<?php echo $row['petid']; ?>">
+    <div class="gallery">
+        <?php while ($row = $result->fetch_assoc()): ?>
+            <div class="image-box">
+                <a href="details.php?petid=<?php echo $row['petid']; ?>">
                     <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                    <p>Discover More!</p>
-                </div>
-                    </a>
-                    <div class="desc"><?php echo htmlspecialchars($row['petname']); ?></div>
-                </div>
+                    <div class="overlay">
+                        <span class="material-icons">search</span>
+                        <p>Discover More!</p>
+                    </div>
+                </a>
+                <div class="desc"><?php echo htmlspecialchars($row['petname']); ?></div>
+            </div>
         <?php endwhile; ?>
+    </div>
 </main>
 
+<?php include_once('includes/footer.inc'); ?>
+
 <?php
-
-include_once('includes/footer.inc');
-
 $connection->close();
 ?>
