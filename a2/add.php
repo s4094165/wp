@@ -34,7 +34,7 @@ include_once('includes/header.inc');
             <div class="file-input-container">
                 <label for="petImage" class="required">Select an Image:</label>
                 <input type="file" id="petImage" name="petImage" accept="image/*" required>
-                <span class="image-size-warning">MAX IMAGE SIZE: 500KB</span>
+                <span class="image-size-warning">MAX IMAGE SIZE: 500PX</span>
             </div>
 
             <label for="caption" class="required">Image Caption:</label><br>
