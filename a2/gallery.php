@@ -32,8 +32,9 @@ if (!$result) {
                         <p>Discover More!</p>
                     </div>
                 </a>
-                <div class="desc"><?php echo htmlspecialchars($row['petname']); ?></div>
-            </div>
+                <div class="desc">
+                    <p class="third"><?php echo htmlspecialchars($row['petname']); ?></div>
+                </div>
         <?php endwhile; ?>
     </div>
 </main>
