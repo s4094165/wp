@@ -2,14 +2,19 @@
 $title = "Pet Details";
 
 include_once('includes/header.inc');
+
 include_once('includes/db_connect.inc');
 ?>
 
 <header>
-  <?php include_once('includes/nav.inc'); ?>
+  <?php
+
+  include_once('includes/nav.inc');
+  ?>
 </header>
 
 <?php
+
 if (isset($_GET['petid'])) {
   $petid = mysqli_real_escape_string($connection, $_GET['petid']); 
 
@@ -20,6 +25,7 @@ if (isset($_GET['petid'])) {
 
   $result = mysqli_stmt_get_result($stmt);     
 
+ 
   if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
 
@@ -46,33 +52,34 @@ mysqli_close($connection);
 ?>
 
 <main class="default-main">
-  <section class="pet-info-section">
-    <div class="pet-image">
-      <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="pet-profile-image">
-    </div>
+    <section class="pet-info-section">
+        <div class="pet-image">
+            <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="pet-profile-image">
+        </div>
 
-    <div class="pet-details">
-      <div class="detail">
-        <i class="material-icons">alarm</i>
-        <p><?php echo $age; ?> Months</p>
-      </div>
-      <div class="detail">
-        <i class="material-icons">pets</i>
-        <p><?php echo ucfirst($type); ?></p>
-      </div>
-      <div class="detail">
-        <i class="material-icons">location_on</i>
-        <p><?php echo $location; ?></p>
-      </div>
-    </div>
+        <div class="pet-details">
+                <div class="detail">
+                    <i class="material-icons">alarm</i>
+                    <p><?php echo $age; ?> Months</p>
+                </div>
+            <div class="detail">
+            <i class="material-icons">pets</i>
+                <p><?php echo ucfirst($type); ?></p>
+            </div>
+            <div class="detail">
+            <i class="material-icons">location_on</i>
+                <p><?php echo $location; ?></p>
+            </div>
+        </div>
 
-    <div class="pet-name-description">
-      <h2><?php echo $petname; ?></h2>
-      <p><?php echo $description; ?></p>
-    </div>
-  </section>
+        <div class="pet-name-description">
+            <h2><?php echo $petname; ?></h2>
+            <p><?php echo $description; ?></p>
+        </div>
+    </section>
 </main>
 
-<?php include_once('includes/footer.inc'); ?>
+<?php
 
-<link rel="stylesheet" type="text/css" href="styles.css">
+include_once('includes/footer.inc');
+?>
