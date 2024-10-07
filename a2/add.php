@@ -28,7 +28,7 @@ include_once('includes/header.inc');
             </select><br>
 
             <label for="description" class="required">Description:</label><br>
-            <input type ="description" name="message" rows="2" cols="155" class="form-input">Describe the pet briefly</textarea>
+            <input type ="description" name="message" rows="2" cols="155" class="form-input" placeholder ="Describe the pet briefly" required>
 
 
             <div class="file-input-container">
