@@ -15,7 +15,7 @@ include_once('includes/header.inc');
 </header>
 
 <main>
-        <form action="submit_pet.html" method="post" enctype="multipart/form-data" class="tall-form">
+        <form action="upload.php" method="post" enctype="multipart/form-data" class="tall-form">
             <label for="petName" class="required">Pet Name:</label><br>
             <input type="text" id="petName" name="petName" placeholder="Provide a name for the pet" required><br>
 
