@@ -20,7 +20,7 @@ include_once('includes/header.inc');
             <input type="text" id="petName" name="petName" placeholder="Provide a name for the pet" required><br>
 
             <label for="petType" class="required">Type:</label><br>
-            <select id="petType" name="petType" required>
+            <select id="petType" name="petType" class="form-input" required>
                 <option value="" disabled selected>--Choose an option--</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
@@ -28,23 +28,23 @@ include_once('includes/header.inc');
             </select><br>
 
             <label for="description" class="required">Description:</label><br>
-            <textarea id="description" name="message" rows="2" cols="155">Describe the pet briefly</textarea>
+            <input type ="description" name="message" rows="2" cols="155" class="form-input">Describe the pet briefly</textarea>
 
 
             <div class="file-input-container">
                 <label for="petImage" class="required">Select an Image:</label>
                 <input type="file" id="petImage" name="petImage" accept="image/*" required>
-                <span class="image-size-warning">MAX IMAGE SIZE: 500PX</span>
+                <span class="image-size-warning">MAX IMAGE SIZE: 500KB</span>
             </div>
 
             <label for="caption" class="required">Image Caption:</label><br>
-            <input type="text" id="caption" name="caption" placeholder="describe the image in one word" required><br>
+            <input type="text" id="caption" name="caption" class="form-input" placeholder="describe the image in one word" required><br>
 
             <label for="age" class="required">Age (Months):</label><br>
             <input type="text" id="age" name="age" placeholder="Age of a pet in months" required class="input-text"><br>
 
             <label for="location" class="required">Location:</label><br>
-            <input type="text" id="location" name="location"  placeholder="Location of the pet" required><br>
+            <input type="text" id="location" name="location" class="form-input" placeholder="Location of the pet" required><br>
             
             <div class="button-container">
                 <button type="submit" class="submit-button">
