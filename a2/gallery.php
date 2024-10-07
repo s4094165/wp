@@ -23,68 +23,19 @@ if (!$result) {
 
     <main>
         <div class="gallery">
-            <div class="image-box">
-                <img src="Images/cat1.jpeg" alt="Image 1">
+           <div class="image-box">
+                <?php while ($row = $result->fetch_assoc()): ?>
+                    <a href="details.php?petid=<?php echo $row['petid']; ?>">
+                    <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>">
                 <div class="overlay">
                     <span class="material-icons">search</span>
                     <p>Discover More!</p>
                 </div>
-
-                <p class="third">Milo</p>
-            </div>
-            <div class="image-box">
-                <img src="Images/dog1.jpeg" alt="Image 2">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                    <p>Discover More!</p>
+                    </a>
+                    <div class="desc"><?php echo htmlspecialchars($row['petname']); ?></div>
                 </div>
-
-                <p class="third">Baxter</p>
-            </div>
-
-            <div class="image-box">
-                <img src="Images/cat2.jpeg" alt="Image 3">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                    <p>Discover More!</p>
-                </div>
-
-                <p class="third">Luna</p>
-            </div>
-
-            <div class="image-box">
-                <img src="Images/dog2.jpeg" alt="Image 4">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                </div>
-
-                <p class="third">Willow</p>
-            </div>
-
-            <div class="image-box">
-                <img src="Images/cat3.jpeg" alt="Image 5">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                    <p>Discover More!</p>
-                </div>
-
-                <p class="third">Oliver</p>
-            </div>
-
-
-            <div class="image-box">
-                <img src="Images/dog3.jpeg" alt="Image 6">
-                <div class="overlay">
-                    <span class="material-icons">search</span>
-                    <p>Discover More!</p>
-            </div>
-
-            <p class="third">Bella</p>
-        </div>
-
-        </div>
-     
-    </main>
+        <?php endwhile; ?>
+</main>
 
 <?php
 
