@@ -10,77 +10,53 @@ include_once('includes/header.inc');
 
     include_once('includes/nav.inc');
     ?>
-    <h4>Add a Pet</h4>
-    <p class="p2">You can add a new pet here</p>
+    <h2>Add a Pet</h2>
+    <p>You can add a new pet here</p>
 </header>
 
-<main class="default-main">
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <div>
-            <label for="PetName">Pet Name: <span class="required">*</span></label>
-            <input type="text" id="PetName" name="PetName" class="form-input" placeholder="Provide a name for the pet" required>
-        </div>
-        
-        <br>
+<main>
+        <form action="submit_pet.html" method="post" enctype="multipart/form-data" class="tall-form">
+            <label for="petName" class="required">Pet Name:</label><br>
+            <input type="text" id="petName" name="petName" placeholder="Provide a name for the pet" required><br>
 
-        <div>
-            <label for="PetType">Type: <span class="required">*</span></label>
-            <select id="PetType" name="PetType" class="form-input" required>
+            <label for="petType" class="required">Type:</label><br>
+            <select id="petType" name="petType" required>
                 <option value="" disabled selected>--Choose an option--</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
                 <option value="other">Other</option>
-            </select>
-        </div>
+            </select><br>
 
-        <br>
+            <label for="description" class="required">Description:</label><br>
+            <textarea id="description" name="message" rows="2" cols="155">Describe the pet briefly</textarea>
 
-        <div>
-            <label for="PetDescription">Description: <span class="required">*</span></label>
-            <input type="text" id="PetDescription" name="PetDescription" class="form-input" placeholder="Describe the pet briefly" required>
-        </div>
 
-        <br>
+            <div class="file-input-container">
+                <label for="petImage" class="required">Select an Image:</label>
+                <input type="file" id="petImage" name="petImage" accept="image/*" required>
+                <span class="image-size-warning">MAX IMAGE SIZE: 500PX</span>
+            </div>
 
-        <div class="file-upload">
-            <label for="PetImage">Select an Image <span class="required">*</span></label>
-            <input type="file" id="PetImage" name="PetImage" accept="image/*" required>
-            <span class="image-size-info">Max image size: 500KB</span>
-        </div>
+            <label for="caption" class="required">Image Caption:</label><br>
+            <input type="text" id="caption" name="caption" placeholder="describe the image in one word" required><br>
 
-        <br>
+            <label for="age" class="required">Age (Months):</label><br>
+            <input type="text" id="age" name="age" placeholder="Age of a pet in months" required class="input-text"><br>
 
-        <div>
-            <label for="ImageCaption">Image Caption: <span class="required">*</span></label>
-            <input type="text" id="ImageCaption" name="ImageCaption" class="form-input" placeholder="Describe the image in one word" required>
-        </div>
+            <label for="location" class="required">Location:</label><br>
+            <input type="text" id="location" name="location"  placeholder="Location of the pet" required><br>
+            
+            <div class="button-container">
+                <button type="submit" class="submit-button">
+                    <span class="material-icons">add_task</span> submit
+                </button>
+                <button type="reset" class="clear-button">
+                    <span class="material-icons">close</span> Clear
+                </button>
+            </div>
 
-        <br>
-
-        <div>
-            <label for="PetAge">Age (Months): <span class="required">*</span></label>
-            <input type="number" id="PetAge" name="PetAge" class="form-input" placeholder="Age of a pet in months" required>
-        </div>
-
-        <br>
-
-        <div>
-            <label for="PetLocation">Location: <span class="required">*</span></label>
-            <input type="text" id="PetLocation" name="PetLocation" class="form-input" placeholder="Location of the pet" required>
-        </div>
-
-        <br>
-
-        <div class="button-position">
-            <button type="submit" class="submit-form">
-                <span class="material-icons">add_task</span> Submit
-            </button>
-            <button type="reset" class="clear-form">
-                <span class="material-icons">close</span> Clear
-            </button>
-        </div>
-    </form>
-</main>
+        </form>
+    </main>
 
 <?php
 
