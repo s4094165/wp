@@ -460,3 +460,11 @@ input[type="file"] {
     margin-bottom: 1px;
 }
 
+.desc {
+    text-align: center;
+    font-family: 'Ysabeau SC', sans-serif;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
