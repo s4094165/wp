@@ -303,7 +303,7 @@ th {
 }
 
 .image-box img {
-    height: 80%;
+    height: 100%;
     width: 100%;
     object-fit: cover; 
     border-top-left-radius: 15px;
