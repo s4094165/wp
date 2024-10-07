@@ -21,13 +21,13 @@ function sanitizeFileName($str) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $petName = validateInput($_POST['PetName']);
-    $petType = validateInput($_POST['PetType']);
-    $petDescription = validateInput($_POST['PetDescription']);
-    $petImage = $_FILES['PetImage'];
-    $imageCaption = validateInput($_POST['ImageCaption']);
-    $petAge = validateInput($_POST['PetAge']);
-    $petLocation = validateInput($_POST['PetLocation']);
+    $petName = validateInput($_POST['petName']);
+    $petType = validateInput($_POST['petType']);
+    $petDescription = validateInput($_POST['petDescription']);
+    $petImage = $_FILES['petImage'];
+    $imageCaption = validateInput($_POST['petCaption']);
+    $petAge = validateInput($_POST['petAge']);
+    $petLocation = validateInput($_POST['petLocation']);
 
     if ($petImage['error'] !== 0) {
         $uploadError = "Error uploading image: " . $petImage['error'];

@@ -27,8 +27,8 @@ include_once('includes/header.inc');
                 <option value="other">Other</option>
             </select><br>
 
-            <label for="description" class="required">Description:</label><br>
-            <input type ="description" name="message" rows="2" cols="155" class="form-input" placeholder ="Describe the pet briefly" required>
+            <label for="petDescription" class="required">Description:</label><br>
+            <input type ="petDescription" name="message" rows="2" cols="155" class="form-input" placeholder ="Describe the pet briefly" required>
 
 
             <div class="file-input-container">
@@ -37,14 +37,14 @@ include_once('includes/header.inc');
                 <span class="image-size-warning">MAX IMAGE SIZE: 500PX</span>
             </div>
 
-            <label for="caption" class="required">Image Caption:</label><br>
-            <input type="text" id="caption" name="caption" class="form-input" placeholder="describe the image in one word" required><br>
+            <label for="petCaption" class="required">Image Caption:</label><br>
+            <input type="text" id="petCaption" name="petCaption" class="form-input" placeholder="describe the image in one word" required><br>
 
-            <label for="age" class="required">Age (Months):</label><br>
-            <input type="text" id="age" name="age" placeholder="Age of a pet in months" required class="input-text"><br>
+            <label for="petAge" class="required">Age (Months):</label><br>
+            <input type="text" id="petAge" name="petAge" placeholder="Age of a pet in months" required class="input-text"><br>
 
-            <label for="location" class="required">Location:</label><br>
-            <input type="text" id="location" name="location" class="form-input" placeholder="Location of the pet" required><br>
+            <label for="petLocation" class="required">Location:</label><br>
+            <input type="text" id="petLocation" name="petLocation" class="form-input" placeholder="Location of the pet" required><br>
             
             <div class="button-container">
                 <button type="submit" class="submit-button">
