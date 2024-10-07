@@ -166,7 +166,7 @@ p.second{
 p.third {
     text-align: center;
     font-family: 'Poetsen One', sans-serif;
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 15px;
 }
 
@@ -304,7 +304,8 @@ th {
 
 .image-box img {
     height: 80%;
-    width: 110%;
+    width: 100%;
+    align-items: center;
     object-fit: cover; 
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
