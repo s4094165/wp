@@ -26,7 +26,9 @@ if (!$result) {
         <?php while ($row = $result->fetch_assoc()): ?>
             <div class="image-box">
                 <a href="details.php?petid=<?php echo $row['petid']; ?>">
-                    <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>">
+                    <div class="image-wrapper">
+                        <img src="images/<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['petname']); ?>">
+                    </div>
                     <div class="overlay">
                         <span class="material-icons">search</span>
                         <p>Discover More!</p>
