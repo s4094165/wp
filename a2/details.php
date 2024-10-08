@@ -54,7 +54,7 @@ mysqli_close($connection);
 <main class="default-main">
     <section class="pet-info-section">
         <div class="pet-image">
-            <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="pet-image">
+            <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="pett-image">
         </div>
 
         <div class="pet-details">
