@@ -2,6 +2,7 @@
 
 $title = "Gallery";
 include_once('includes/header.inc');
+include_once('includes/nav.inc');
 include('includes/db_connect.inc');
 
 $sql = "SELECT petid, petname, image FROM pets"; 
