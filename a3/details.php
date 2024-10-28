@@ -2,7 +2,7 @@
 $title = "Pet Details";
 
 include_once('includes/header.inc');
-
+include_once('includes/nav.inc');
 include_once('includes/db_connect.inc');
 ?>
 
