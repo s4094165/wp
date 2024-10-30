@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $imageCaption = validateInput($_POST['petCaption']);
     $petAge = validateInput($_POST['petAge']);
     $petLocation = validateInput($_POST['petLocation']);
+    $username = $_SESSION["username"];
 
     if ($petImage['error'] !== 0) {
         $uploadError = "Error uploading image: " . $petImage['error'];
@@ -60,23 +61,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (move_uploaded_file($petImage['tmp_name'], $targetFile)) {
 
                 } else {
-                    $uploadError = "Failed to upload image.";
+                    $_SESSION['error'] = "Failed to upload image.";
+                    header('location:add.php');
                 }
             }
         }
     }
 
     if (empty($uploadError)) {
-        $sql = "INSERT INTO pets (petname, type, description, image, caption, age, location) 
-                VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO pets (petname, type, description, image, caption, age, location,username) 
+                VALUES (?, ?, ?, ?, ?, ?, ?,?)";
 
         $stmt = $connection->prepare($sql);
-        $stmt->bind_param('sssssss', $petName, $petType, $petDescription, $fileName, $imageCaption, $petAge, $petLocation);
+        $stmt->bind_param('ssssssss', $petName, $petType, $petDescription, $fileName, $imageCaption, $petAge, $petLocation,$username);
 
         if ($stmt->execute()) {
-        $successMessage = "Successfully added the pet :)";
+        $_SESSION['success'] = "Successfully added the pet :)";
+        header('location:add.php');
         } else {
-            $errorMessage = "Error adding pet: " . $connection->error;
+            $_SESSION['error'] = "Error adding pet: " . $connection->error;
+            header('location:add.php');
         }
         $stmt->close();
     }
@@ -84,16 +88,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $connection->close();
 
-if (isset($successMessage)) {
-    echo "<p class='success-message'>$successMessage</p>";
-} elseif (isset($errorMessage) || isset($uploadError)) {
-    echo "<p class='error-message'>";
-    if (isset($errorMessage)) {
-        echo $errorMessage;
-    }
-    if (isset($uploadError)) {
-        echo $uploadError;
-    }
-    echo "</p>";
-}
 ?>
