@@ -32,17 +32,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($petImage['error'] !== 0) {
         $uploadError = "Error uploading image: " . $petImage['error'];
+        $_SESSION['error'] = $uploadError;
+        header('location:add.php');
     } else {
 
         $allowedExtensions = ['jpg', 'jpeg', 'png'];
         $imageExtension = pathinfo($petImage['name'], PATHINFO_EXTENSION);
         if (!in_array($imageExtension, $allowedExtensions)) {
             $uploadError = "Only JPG, JPEG and PNG images are allowed.";
+            $_SESSION['error'] = $uploadError;
+            header('location:add.php');
         } else {
 
             $maxSize = 500000; 
             if ($petImage['size'] > $maxSize) {
                 $uploadError = "Image size exceeds the limit of 500KB.";
+                $_SESSION['error'] = $uploadError;
+                header('location:add.php');
+
             } else {
 
                 $sanitizedPetName = sanitizeFileName($petName);
@@ -61,7 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (move_uploaded_file($petImage['tmp_name'], $targetFile)) {
 
                 } else {
-                    $_SESSION['error'] = "Failed to upload image.";
+                    $uploadError = "Failed to upload image.";
+                    $_SESSION['error'] = $uploadError;
                     header('location:add.php');
                 }
             }
