@@ -4,36 +4,52 @@ $title = "Homepage";
 
 include_once('includes/header.inc');
 include_once('includes/nav.inc');
+include('includes/db_connect.inc');
 ?>
  <div class="content-wrapper">
+<?php
+    if(isset($_SESSION['success'])){?>
+    <div class="alert alert-success  alert-dismissible fade show" role="alert">
+    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php } 
+?>
     <div class="content">
     <div class="container">
        
-<div class="row">
-<div id="demo" class="carousel slide col-md-5" data-bs-ride="carousel">
+<div class="row" >
+    <?php
+        $sql    = "SELECT image FROM pets LIMIT 4";
+        $stmt   = mysqli_prepare($connection,$sql); 
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt);
+        mysqli_stmt_bind_result($stmt,$image);
+        $images = array();
+        while(mysqli_stmt_fetch($stmt)){
+            $images[] = array('image' => $image);
+        }
+        mysqli_stmt_close($stmt);
+        mysqli_close($connection);
 
+    ?>
+<div id="demo" class="carousel slide " data-bs-ride="carousel">
+<br><br>
   <!-- Indicators/dots -->
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    <?php foreach($images as $key => $image){?>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="<?php echo $key;?>" class="<?php if($key == 0) { echo 'active';}?>">
+        </button>
+    <?php } ?>
   </div>
 
   <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/cat1.jpeg" alt="Los Angeles" class="d-block w-100">
-    </div>
-    <div class="carousel-item">
-      <img src="images/cat2.jpeg" alt="Chicago" class="d-block w-100">
-    </div>
-    <div class="carousel-item">
-      <img src="images/cat3.jpeg" alt="New York" class="d-block w-100">
-    </div>
-    <div class="carousel-item">
-      <img src="images/pets.jpeg" alt="New York" class="d-block w-100">
-    </div>
+  <div class="carousel-inner" >
+    <?php foreach($images as $key => $image){?>
+        <div class="carousel-item <?php if($key == 0) { echo 'active';}?>">
+          <img src="images/<?php echo $image['image'];?>" alt="<?php echo $image['image'];?>" class="d-block w-100">
+        </div>
+    <?php } ?>
   </div>
 
   <!-- Left and right controls/icons -->
@@ -43,15 +59,17 @@ include_once('includes/nav.inc');
   <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
+<br><br>
+</div>
+<div class="home-header"><br><br>
+  <h4 class="main-title">PETS VICTORIA</h4>
+  <font class="welcome-text">WELCOME TO PET<br>ADOPTION</font>
+</div>
+</div>
+</div></div></div>
 
-</div>
-<div class=" col-md-6">
-  <h1 class="main-title">PETS VICTORIA</h1>
-  <p class="welcome-text">WELCOME TO PET<br>ADOPTION</p>
-</div>
-</div>
-
-<br>
+<div class="content" id="home_content">
+    <div class="container">
 <form action="search.php" method="post">
     <div class="row">
         <div class="col-md-5">
@@ -66,14 +84,12 @@ include_once('includes/nav.inc');
             </select>
         </div>
         <div class="col-md-2">
-             <button type="submit" class="submit-button">
-                    <span class="material-icons"></span> Search
-                </button>
+            <input type="submit" name="" value="Search" class="btn home_button">
         </div>
     </div>
 </form>
-<h3>Discover Pets Victoria</h3>
-    <p>
+<h3 class="homeh3">Discover Pets Victoria</h3>
+    <p class="homep">
         Pets Victoria is a dedicated pet adoption organization based in Victoria, Australia, focussed on providing a safe and loving environment for pets in need. With a compassionate approach, Pets Victoria works tirelessly to rescue, rehabilitate, and rehome dogs, cats, and other animals. Their mission is to connect these deserving pets with caring individuals and families, creating lifelong bonds. The organization offers a range of services, including adoption counselling, pet education, and community support programs, all aimed at promoting responsible pet ownership and reducing the number of homeless animals.
     </p>
 </div>

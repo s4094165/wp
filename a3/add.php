@@ -1,6 +1,6 @@
 <?php
 
-$title = "Add Page";
+$title = "AddPage";
 
 include_once('includes/header.inc');
 include_once('includes/nav.inc');
@@ -10,9 +10,21 @@ include_once('includes/nav.inc');
     <h2>Add a Pet</h2>
     <p>You can add a new pet here</p>
 </header>
-
-<div class="content-wrapper ">
-    <div class="content ">
+<?php
+        if(isset($_SESSION['error'])){?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <?php echo $_SESSION['error']; unset($_SESSION['error']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php } 
+        if(isset($_SESSION['success'])){?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php } ?>
+<div class="content-wrappers ">
+    <div class="content">
     <div class="container ">
         <form action="upload.php" method="post" enctype="multipart/form-data" class="tall-forms">
             <div class="form-group">

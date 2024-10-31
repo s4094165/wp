@@ -35,7 +35,7 @@ if (isset($_GET['petid'])) {
     $location = htmlspecialchars($row['location']);
     $image = htmlspecialchars($row['image']); 
     $description = htmlspecialchars($row['description']);
-
+    $username = htmlspecialchars($row['username']);
     $imagePath = "images/" . $image;
   } else {
     echo "<p>Pet not found.</p>";
@@ -52,31 +52,31 @@ mysqli_close($connection);
 ?>
 
 <main class="default-main">
-    <section class="pet-info-section">
-        <div class="pet-image">
-            <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="pet-image">
-        </div>
-
-        <div class="pet-details">
-                <div class="detail">
-                    <i class="material-icons">alarm</i>
-                    <p><?php echo $age; ?> Months</p>
-                </div>
-            <div class="detail">
-            <i class="material-icons">pets</i>
-                <p><?php echo ucfirst($type); ?></p>
-            </div>
-            <div class="detail">
-            <i class="material-icons">location_on</i>
-                <p><?php echo $location; ?></p>
-            </div>
-        </div>
-
-        <div class="pet-name-description">
-            <h2><?php echo $petname; ?></h2>
-            <p><?php echo $description; ?></p>
-        </div>
-    </section>
+  <div class="content row">
+     <div class="col-md-4">
+      <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="">
+      <table>
+        <tr>
+          <td class="detail"><br><i class="material-icons">alarm</i><br><?php echo $age; ?> Months</td>
+          <td class="detail"><br><i class="material-icons">pets</i><br><?php echo ucfirst($type); ?></td>
+          <td class="detail"><br><i class="material-icons">location_on</i><br><?php echo $location; ?></td>
+        </tr>
+        <?php
+          if(@$_SESSION["username"] == $username){?>
+        <tr>
+          <td class="edits">
+            <a href="edit.php?petid=<?php echo $_GET['petid'];?>" class="btn btn-primary btn-sm">Edit</a>
+            <a href="delete.php?petid=<?php echo $_GET['petid'];?>" class="btn btn-danger btn-sm" onclick ="return confirmDelete()">Delete</a>
+          </td>
+        </tr>
+      <?php } ?>
+      </table>
+      </div>
+      <div class="col-md-6">
+        <div class="h2"><?php echo $petname; ?></div>
+        <p class="homep"><?php echo $description; ?></p>
+      </div>
+  </div>
 </main>
 
 <?php
