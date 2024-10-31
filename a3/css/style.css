@@ -1,4 +1,7 @@
-
+body{
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 98%;
+}
 header{
    
     color: #008080;
@@ -7,6 +10,7 @@ header{
 
 nav {
     background-color: #008080;
+    font-family: 'Ysabeau SC', sans-serif;
 }
 
 nav img {
@@ -58,83 +62,64 @@ main {
     padding: 20px;
     background-color: #FFFFFF;
 }
-
+.content-wrapper{
+    background-color: #f5e7be; 
+    margin-top: -10px;
+}
+#demo{
+    width: 40%;
+}
+#home_content{
+    margin-top: 3px;
+}
+.homeh3{
+    font-family: 'Poetsen One', sans-serif;
+}
+.homep{
+    text-align: justify;
+    line-height: 15px;
+}
 .main-title {
     font-family: 'Permanent Marker', cursive;
-    font-size: 70px;
-    /*margin-left: 5px; */
+    font-size: 45px;
+    color: #E57F3D;
 }
 
 .welcome-text {
     font-family: 'Poetsen One', cursive;
-    font-size: 60px;
-    /*margin-left: 5px; */
+    font-size: 35px; 
     color: #008080;
-    /*text-align: left;*/
-
+}
+.carousel .carousel-item  {
+  height: 250px;
 }
 .carousel img{
-        min-height: 305px;
+        object-fit: cover;
+        width: 40%;
     }
+.home-header{
+    width: 40%;
+     margin-left: 0%;
+}
 @media only screen and (max-width: 767px){
     .main-title {
-        font-size:25px;
-        position: absolute;
-        margin-left: 50%;
-        margin-top: -180px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+    color: #E57F3D; 
     }
     .welcome-text {
-        font-size:28px;
-        position: absolute;
-        margin-left: 50%;
-       margin-top: -130px;
-    }
-    .carousel{
-        width: 250px;
-    }
-    .carousel img{
-         min-height: 200px;
+    font-family: 'Poetsen One', cursive;
+    font-size: 20px;
+    color: #008080;
     }
 }
-@media only screen and (min-width:768px) and (max-width: 1023px){
-    .main-title {
-         font-size:25px;
-        position: absolute;
-        margin-left: 10%;
-        margin-top: 0px;
-    }
-    .welcome-text {
-        font-size:28px;
-        position: absolute;
-        margin-left: 10%;
-        margin-top: 30px;
-    }
-    .carousel{
-        width: 250px;
-    }
-    .carousel img{
-         min-height: 200px;
-    }
+.home_button{
+    background-color: #008080;
+    color: #fff;
 }
-@media only screen and (min-width: : 1024px){
-    .main-title {
-        font-size:25px;
-        position: absolute;
-        margin-left: 50%;
-        margin-top: -180px;
-    }
-    .welcome-text {
-        font-size:28px;
-        position: absolute;
-        margin-left: 50%;
-       margin-top: -130px;
-    }
-    .carousel{
-        width: 250px;
-    }
-    .carousel img{
-         min-height: 200px;
-    }
+.home_button:hover{
+    background-color: #008080;
+    color: #fff;
 }
 .circle {
     float: right;
@@ -155,12 +140,11 @@ footer {
     background-color: #E57F3D;
     color: #36454F;
     text-align: center;
-    padding: 1px;
     font-family: 'Ysabeau SC', sans-serif;
     font-size: 12px; 
     font-weight: bold;
     margin-top: auto;
-    /*margin-bottom: 60px;*/
+    padding-bottom: 1px;
 }
 
 
@@ -181,8 +165,13 @@ h2 {
     font-family: 'Poetsen One', sans-serif;
     color: #36454F ;
     margin-top: 20px;
-}
 
+}
+.h2{
+    font-family: 'Poetsen One', sans-serif;
+    color: #36454F ;
+    text-transform: capitalize;
+}
 p {
     text-align: center;
     font-family: 'Ysabeau SC', sans-serif;
@@ -323,7 +312,7 @@ form {
     justify-content: center;
 }
 
-.image-box {
+.thumbnail {
     display: flex;
     height: 240px;
     width: 300px;
@@ -336,7 +325,7 @@ form {
     overflow: hidden; 
 }
 
-.image-box img {
+.thumbnail img {
     height: 100%;
     width: 100%;
     align-items: center;
@@ -347,11 +336,11 @@ form {
     opacity: 1;
 }
 
-.image-box:hover img {
+.thumbnail:hover img {
     opacity: 0.5; 
 }
 
-.image-box .overlay {
+.thumbnail .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -364,11 +353,11 @@ form {
     transition: opacity 0.5s; 
 }
 
-.image-box:hover .overlay {
+.thumbnail:hover .overlay {
     opacity: 2; 
 }
 
-.image-box .overlay .material-icons {
+.thumbnail .overlay .material-icons {
     font-size: 48px;
     color: #36454F;
     background: transparent;
@@ -493,7 +482,16 @@ input[type="file"] {
 .pet-details .detail i {
     margin-bottom: 1px;
 }
-
+ .detail .material-icons{
+    color: #008080;
+}
+.detail{
+    padding-left: 20px;
+    padding-right: 40px;
+}
+.edits {
+    padding-left: 20px;
+}
 .desc {
     text-align: center;
     font-family: 'Ysabeau SC', sans-serif;
