@@ -35,6 +35,7 @@ if (isset($_GET['petid'])) {
     $location = htmlspecialchars($row['location']);
     $image = htmlspecialchars($row['image']); 
     $description = htmlspecialchars($row['description']);
+    $caption = htmlspecialchars($row['caption']);
     $username = htmlspecialchars($row['username']);
     $imagePath = "images/" . $image;
   } else {
@@ -74,7 +75,7 @@ mysqli_close($connection);
       </div>
       <div class="col-md-6">
         <div class="h2"><?php echo $petname; ?></div>
-        <p class="homep"><?php echo $description; ?></p>
+        <p class="homep"><?php echo $description .' '. $caption; ?></p>
       </div>
   </div>
 </main>
