@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm ">
+<nav class="navbar navbar-expand-sm navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php"><img src="images/logo.jpeg" alt="Pets Victoria Logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
