@@ -5,3 +5,7 @@ function navigateToPage() {
         window.location.href = selectedPage;
     }
 }
+
+function confirmDelete(){
+	return confirm("Are you sure want to delete?");
+}
