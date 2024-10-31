@@ -73,10 +73,10 @@ include('includes/db_connect.inc');
 <form action="search.php" method="post">
     <div class="row">
         <div class="col-md-5">
-            <input type="text" name="" class="form-control" placeholder="I am Looking for..."> 
+            <input type="text" name="search" class="form-control" placeholder="I am Looking for..."> 
         </div>
         <div class="col-md-5">
-            <select class="form-control">
+            <select class="form-control" name="type">
                 <option value="">Select your Pet Type</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
@@ -84,7 +84,7 @@ include('includes/db_connect.inc');
             </select>
         </div>
         <div class="col-md-2">
-            <input type="submit" name="" value="Search" class="btn home_button">
+            <input type="submit"  value="Search" class="btn home_button">
         </div>
     </div>
 </form>

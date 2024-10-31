@@ -13,6 +13,14 @@ include_once('includes/db_connect.inc');
   ?>
 </header>
 <div class="h2"><?php  echo $_GET['username']."'s Collection";?></div>
+<?php
+    if(isset($_SESSION['success'])){?>
+    <div class="alert alert-success  alert-dismissible fade show" role="alert">
+    <?php echo $_SESSION['success']; unset($_SESSION['success']);?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php } 
+?>
 <main class="default-main">
 <div class="content row">
 <?php
@@ -36,11 +44,13 @@ if (isset($_GET['username'])) {
     $location = htmlspecialchars($row['location']);
     $image = htmlspecialchars($row['image']); 
     $description = htmlspecialchars($row['description']);
-
+    $caption = htmlspecialchars($row['caption']);
     $imagePath = "images/" . $image;?>
 
       <div class="col-md-4">
+         <a href="details.php?petid=<?php echo $row['petid'];?>"> 
           <img src="<?php echo $imagePath; ?>" alt="<?php echo $petname; ?>" class="" style="width:100%;">
+        </a>
       <table>
         <tr>
           <td class="detail"><br><i class="material-icons">alarm</i><br><?php echo $age; ?> Months</td>
@@ -56,11 +66,11 @@ if (isset($_GET['username'])) {
           </td>
         </tr>
       <?php } ?>
-      </table>
+      </table><br>
       </div>
       <div class="col-md-7">
         <div class="h2"><?php echo $petname; ?></div>
-        <p class="homep"><?php echo $description; ?></p>
+        <p class="homep"><?php echo $description .' '. $caption;; ?></p>
       </div>
   <?php  } 
   }
