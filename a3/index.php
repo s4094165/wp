@@ -63,7 +63,7 @@ include('includes/db_connect.inc');
 </div>
 <div class="home-header"><br><br>
   <h4 class="main-title">PETS VICTORIA</h4>
-  <font class="welcome-text">WELCOME TO PET<br>ADOPTION</font>
+  <div class="welcome-text">WELCOME TO PET<br>ADOPTION</div>
 </div>
 </div>
 </div></div></div>
