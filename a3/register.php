@@ -32,8 +32,8 @@ $date_format = explode('-', $cd);
 		<?php } ?>
 		<form action="users.php" method="post">
 	          <div class="form-group">
-	            <label for="UserName " class="required">User Name </label>
-	            <input type="text" class="form-control" id="UserName " placeholder="Enter User Name " required name="UserName">
+	            <label for="UserName" class="required">User Name </label>
+	            <input type="text" class="form-control" id="UserName" placeholder="Enter User Name " required name="UserName">
 	          </div>
 	          <div class="form-group">
 	            <label for="Password" class="required">Password</label>
@@ -41,7 +41,7 @@ $date_format = explode('-', $cd);
 	          </div>
 	          <div class="form-group">
 	            <label for="date" class="required">Reg Date</label>
-	            <input type="datetime-local" class="form-control" id="date" placeholder="Date" required name="reg_date">
+	            <input type="datetime-local" class="form-control" id="date" required name="reg_date">
 	          </div>
 	          <br>
 	        <div class="button-container">
