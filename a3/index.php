@@ -66,7 +66,9 @@ include('includes/db_connect.inc');
   <div class="welcome-text">WELCOME TO PET<br>ADOPTION</div>
 </div>
 </div>
-</div></div></div>
+</div>
+</div>
+<!-- </div> -->
 
 <div class="content" id="home_content">
     <div class="container">
