@@ -12,7 +12,6 @@
 		</p>
     </footer>
 </body>
-</html>
 <script type="text/javascript" >
   function confirmDelete(){
   return confirm("Are you sure want to delete?");
@@ -22,3 +21,4 @@ document.getElementById('petTypeChange').addEventListener('change',function(){
     document.getElementById('selectForm').submit();
 });
 </script>
+</html>
