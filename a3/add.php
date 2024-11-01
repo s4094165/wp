@@ -53,7 +53,7 @@ include_once('includes/nav.inc');
             </div>
             <div class="form-group">
             <label for="petCaption" class="required">Image Caption:</label>
-            <input type="text" id="petCaption" name="petCaption" class="form-control" placeholder="describe the image in one word" required class="form-control">
+            <input type="text" id="petCaption" name="petCaption" class="form-control" placeholder="describe the image in one word" required>
             </div>
             <div class="form-group">
             <label for="petAge" class="required">Age (Months):</label>
