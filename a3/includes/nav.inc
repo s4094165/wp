@@ -35,7 +35,7 @@
       </ul>
       <form class="d-flex" action="search.php" method="post">
         <input class="form-control me-2" type="text" placeholder="Search" name="search">
-        <input class="form-control me-2" type="hidden" placeholder="Search" name="type">
+        <input class="form-control me-2" type="hidden" name="type">
        <button type="submit" class="search-button">
           <span class="material-icons">search</span>
         </button>
