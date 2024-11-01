@@ -21,8 +21,8 @@ include_once('includes/nav.inc');
 		<?php } ?>
 		<form action="loginUser.php" method="post">
 	          <div class="form-group">
-	            <label for="UserName " class="required">User Name </label>
-	            <input type="text" class="form-control" id="UserName " placeholder="Enter User Name " required name="UserName">
+	            <label for="UserName" class="required">User Name </label>
+	            <input type="text" class="form-control" id="UserName" placeholder="Enter User Name " required name="UserName">
 	          </div>
 	          <div class="form-group">
 	            <label for="Password" class="required">Password</label>
