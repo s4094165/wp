@@ -11,8 +11,7 @@
         <br>© Copyright s4094165. All Rights Reserved | Designed For Pets Victoria
 		</p>
     </footer>
-</body>
-<script type="text/javascript" >
+	<script type="text/javascript" >
   function confirmDelete(){
   return confirm("Are you sure want to delete?");
 }
@@ -21,4 +20,6 @@ document.getElementById('petTypeChange').addEventListener('change',function(){
     document.getElementById('selectForm').submit();
 });
 </script>
+</body>
+
 </html>
